@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         initView();
         setOnClickListener();
         randomNumber = random.nextInt(4);
-        Log.e("=========>", "NumberChecker : random: " + randomNumber);
     }
 
     private void setOnClickListener() {
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         Toast.makeText(this, "Good! One more, random number is changed :))) ", Toast.LENGTH_SHORT)
             .show();
         randomNumber = random.nextInt(4);
-        Log.e("=========>", "NumberChecker : random: " + randomNumber);
     }
 
     @Override
@@ -64,22 +62,18 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         switch (v.getId()) {
             case R.id.button1:
                 choice = 1;
-                Log.e("======>>>>>>>", "choice: " + choice);
                 mPresenter.NumberChecker(choice, randomNumber);
                 break;
             case R.id.button2:
                 choice = 2;
-                Log.e("======>>>>>>>", "choice: " + choice);
                 mPresenter.NumberChecker(choice, randomNumber);
                 break;
             case R.id.button3:
                 choice = 3;
-                Log.e("======>>>>>>>", "choice: " + choice);
                 mPresenter.NumberChecker(choice, randomNumber);
                 break;
             case R.id.button4:
                 choice = 4;
-                Log.e("======>>>>>>>", "choice: " + choice);
                 mPresenter.NumberChecker(choice, randomNumber);
                 break;
             default: break;
